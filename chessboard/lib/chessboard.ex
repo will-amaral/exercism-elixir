@@ -5,5 +5,5 @@ defmodule Chessboard do
 
   def ranks, do: rank_range() |> Enum.into([])
 
-  def files, do: file_range() |> Enum.into([], &to_string([&1]))
+  def files, do: file_range() |> Enum.into([], & <<&1>>)
 end
