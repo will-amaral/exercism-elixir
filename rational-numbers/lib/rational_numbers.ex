@@ -6,6 +6,9 @@ defmodule RationalNumbers do
   """
   @spec add(a :: rational, b :: rational) :: rational
   def add(a, b) do
+    numerator = elem(a,0) * elem(b,1) + elem(a,1) * elem(b,0)
+    denominator = elem(b,0) * elem(b,1) |> Kernel.abs()
+     {numerator, denominator}
   end
 
   @doc """
@@ -13,6 +16,9 @@ defmodule RationalNumbers do
   """
   @spec subtract(a :: rational, b :: rational) :: rational
   def subtract(a, b) do
+    numerator = elem(a,0) * elem(b,1) - elem(a,1) * elem(b,0)
+    denominator = elem(b,1) * elem(b,0)
+     {numerator, denominator}
   end
 
   @doc """
@@ -55,7 +61,6 @@ defmodule RationalNumbers do
   """
   @spec reduce(a :: rational) :: rational
   def reduce(a) do
-  end
 
-  def gcd(a,b), if: b, do: gcd(b, rem(b,a)), else: a
+  end
 end

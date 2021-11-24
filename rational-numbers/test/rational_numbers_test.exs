@@ -10,7 +10,7 @@ defmodule RationalNumbersTest do
       assert RationalNumbers.add(r1, r2) == result
     end
 
-    @tag :pending
+    #@tag :pending
     test "Add a positive rational number and a negative rational number" do
       r1 = {1, 2}
       r2 = {-2, 3}
@@ -18,7 +18,7 @@ defmodule RationalNumbersTest do
       assert RationalNumbers.add(r1, r2) == result
     end
 
-    @tag :pending
+    # @tag :pending
     test "Add two negative rational numbers" do
       r1 = {-1, 2}
       r2 = {-2, 3}
@@ -26,7 +26,7 @@ defmodule RationalNumbersTest do
       assert RationalNumbers.add(r1, r2) == result
     end
 
-    @tag :pending
+    # @tag :pending
     test "Add a rational number to its additive inverse" do
       r1 = {1, 2}
       r2 = {-1, 2}
